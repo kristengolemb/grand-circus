@@ -1,3 +1,5 @@
+package deliverable1;
+
 import java.util.Scanner;
 
 public class App {
@@ -13,18 +15,17 @@ public class App {
 		int value = input.nextInt();
 
 		//Tell them what they entered
-		System.out.println("You entered:" + value);
-		
-	int result = 0;
-	int rem;
-	
-	while (n > 0) {
-	  rem = n % 10;
-	  n = n / 10;
-	  result = result * 10 + rem
-	}
-		//Tell them the reverse of their input
-		System.out.println("The reverse of what you entered is" + result);
+		System.out.println("You entered: " + value);
 
-	}
-}
+			int reverse = 0;
+
+			while(value > 0) {
+				reverse *= 10;
+				reverse += value % 10;
+				value /= 10;
+			}
+		//Tell them the reverse of what they entered
+		System.out.println ("The reverse of that number is " + reverse);
+		
+			}
+		}
