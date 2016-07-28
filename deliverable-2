@@ -1,11 +1,18 @@
 import java.util.Scanner; 
 import java.time.LocalDate; 
-import java.time.Period;  
+import java.time.Period;
+import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
 
-class TimeDurationCalculator {
+class DurationTest {
 
-    public static void main(String[] args) {
+//    private static final String DateTimeFormatter = null;
+//	private static java.time.format.DateTimeFormatter formatter;
 
+	public static void main(String[] args) {
+    	
+ //   	public SimpleDateFormat.applyPattern("yyyy-MMM-dd");
+    	
         System.out.print("Enter any date in YYYY-MM-DD format:");
       
         Scanner scanner = new Scanner(System.in);
@@ -16,7 +23,9 @@ class TimeDurationCalculator {
 
         System.out.print("Enter a second date, so long as it falls after the first date entered. (Use in YYYY-MM-DD format: ");
         
-        String dateTwoString = scanner.nextLine();
+        Scanner scanner2 = new Scanner(System.in);
+        
+        String dateTwoString = scanner2.nextLine();
         
         LocalDate dateTwo = LocalDate.parse(dateTwoString);
 
