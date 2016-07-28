@@ -1,41 +1,42 @@
-import java.util.Scanner; 
-import java.time.LocalDate; 
+import java.util.Scanner;
+import java.time.LocalDate;
 import java.time.Period;
 import java.text.SimpleDateFormat;
 import java.time.temporal.ChronoUnit;
 
 class DurationTest {
 
-//    private static final String DateTimeFormatter = null;
-//	private static java.time.format.DateTimeFormatter formatter;
+	// private static final String DateTimeFormatter = null;
+	// private static java.time.format.DateTimeFormatter formatter;
 
 	public static void main(String[] args) {
-    	
- //   	public SimpleDateFormat.applyPattern("yyyy-MMM-dd");
-    	
-        System.out.print("Enter any date in YYYY-MM-DD format:");
-      
-        Scanner scanner = new Scanner(System.in);
 
-        String dateOneString = scanner.nextLine();
+		// public SimpleDateFormat.applyPattern("yyyy-MMM-dd");
 
-        LocalDate dateOne = LocalDate.parse(dateOneString);
+		System.out.print("Enter any date in YYYY-MM-DD format:");
 
-        System.out.print("Enter a second date, so long as it falls after the first date entered. (Use in YYYY-MM-DD format: ");
-        
-        Scanner scanner2 = new Scanner(System.in);
-        
-        String dateTwoString = scanner2.nextLine();
-        
-        LocalDate dateTwo = LocalDate.parse(dateTwoString);
+		Scanner scanner = new Scanner(System.in);
 
-        Period difference = dateOne.until(dateTwo);
+		String dateOneString = scanner.nextLine();
 
-        int days = difference.getDays();
-        int months = difference.getMonths();
-        int years = difference.getYears();
-        scanner.close();
+		LocalDate dateOne = LocalDate.parse(dateOneString);
 
-        System.out.println("Your time difference is: " + months + " Months, " + days + " Days, and " + years + " Years.");
-    }
+		System.out.println(
+		"Enter a second date, so long as it falls after the first date entered. (Use in YYYY-MM-DD format: ");
+
+		Scanner scanner2 = new Scanner(System.in);
+
+		String dateTwoString = scanner2.nextLine();
+
+		LocalDate dateTwo = LocalDate.parse(dateTwoString);
+
+		Period difference = dateOne.until(dateTwo);
+
+		int days = difference.getDays();
+		int months = difference.getMonths();
+		int years = difference.getYears();
+		scanner.close();
+
+		System.out.println("Your time difference is: " + months + " Months, " + days + " Days, and " + years + " Years.");
+	}
 }
