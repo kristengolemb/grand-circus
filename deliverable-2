@@ -6,12 +6,7 @@ import java.time.temporal.ChronoUnit;
 
 class DurationTest {
 
-	// private static final String DateTimeFormatter = null;
-	// private static java.time.format.DateTimeFormatter formatter;
-
 	public static void main(String[] args) {
-
-		// public SimpleDateFormat.applyPattern("yyyy-MMM-dd");
 
 		System.out.print("Enter any date in YYYY-MM-DD format:");
 
@@ -21,8 +16,8 @@ class DurationTest {
 
 		LocalDate dateOne = LocalDate.parse(dateOneString);
 
-		System.out.println(
-		"Enter a second date, so long as it falls after the first date entered. (Use in YYYY-MM-DD format: ");
+		System.out.print(
+		"Enter a second date, so long as it falls after the first date entered. (Use YYYY-MM-DD format: ");
 
 		Scanner scanner2 = new Scanner(System.in);
 
@@ -37,6 +32,7 @@ class DurationTest {
 		int years = difference.getYears();
 		scanner.close();
 
-		System.out.println("Your time difference is: " + months + " Months, " + days + " Days, and " + years + " Years.");
+		System.out
+		.println("Your time difference is: " + months + " Months, " + days + " Days, and " + years + " Years.");
 	}
 }
